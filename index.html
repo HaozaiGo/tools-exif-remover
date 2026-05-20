@@ -1,13 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <!-- Primary Meta -->
+  <meta name="description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
+  <meta name="keywords" content="exif remover, remove exif online, exif viewer, photo metadata remover, 删除exif, 图片隐私保护">
+  <meta name="author" content="Dudu Tools">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://exif-remover.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EXIF Remover - 免费在线工具">
+  <meta property="og:description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
+  <meta property="og:url" content="https://exif-remover.vercel.app/">
+  <meta property="og:image" content="https://exif-remover.vercel.app/og-image.png">
+  <meta property="og:site_name" content="EXIF Remover">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EXIF Remover - 免费在线工具">
+  <meta name="twitter:description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
+  <meta name="twitter:image" content="https://exif-remover.vercel.app/og-image.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXIF Remover - 图片 EXIF 数据查看与删除工具</title>
-  <meta name="description" content="免费在线 EXIF 数据查看与删除工具。查看照片元数据（拍摄时间、相机型号、GPS 位置），一键清除隐私信息。浏览器端处理。">
-  <meta name="keywords" content="exif remover, remove exif online, exif viewer, photo metadata remover, privacy tool, 删除exif">
-  <link rel="canonical" href="https://exif-remover.vercel.app/">
+  <title>EXIF Remover - 免费在线工具 | 浏览器端处理 · 隐私安全</title>
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "EXIF Remover",
+  "description": "在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。",
+  "url": "https://exif-remover.vercel.app/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "EXIF元数据全面解析",
+    "GPS地理位置检测与警告",
+    "一键清除所有元数据",
+    "清除前后文件大小对比",
+    "支持JPG/PNG/WebP/GIF",
+    "隐私保护优先"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什么是 EXIF 数据？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EXIF 是照片文件中包含的元数据，记录了相机型号、拍摄日期、GPS 坐标、曝光参数等信息。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么要删除 EXIF 数据？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EXIF 可能包含 GPS 位置、相机型号等隐私信息。在分享照片前清除 EXIF 可以保护个人隐私。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "删除 EXIF 会影响图片质量吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "清除 EXIF 时可能会因重新压缩略微影响画质，但工具会使用高质量设置尽量减少损失。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "图片会上传到服务器吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。所有处理在浏览器端完成，图片不上传任何服务器，您的隐私安全有保障。"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <header class="header">

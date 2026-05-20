@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://exif-remover.vercel.app/sitemap.xml

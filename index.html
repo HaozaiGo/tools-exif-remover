@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXIF Remover - 图片 EXIF 数据查看与删除工具</title>
+  <meta name="description" content="免费在线 EXIF 数据查看与删除工具。查看照片元数据（拍摄时间、相机型号、GPS 位置），一键清除隐私信息。浏览器端处理。">
+  <meta name="keywords" content="exif remover, remove exif online, exif viewer, photo metadata remover, privacy tool, 删除exif">
+  <link rel="canonical" href="https://exif-remover.vercel.app/">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">📷 EXIF Remover</h1>
+        <p class="tagline">查看图片 EXIF 元数据 · 一键清除隐私信息 · 浏览器端处理</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main container">
+    <div class="card">
+      <!-- Upload Area -->
+      <div class="upload-section">
+        <div id="drop-zone" class="drop-zone">
+          <div class="drop-content">
+            <span class="drop-icon">🖼️</span>
+            <p>拖拽图片到此处或点击选择</p>
+            <p class="drop-hint">支持 JPG / PNG / WebP / GIF</p>
+          </div>
+          <input type="file" id="file-input" class="file-input" accept="image/jpeg,image/png,image/webp,image/gif">
+        </div>
+      </div>
+
+      <!-- Results (hidden initially) -->
+      <div id="result-area" class="result-area" style="display:none">
+        <!-- Preview + Info -->
+        <div class="preview-row">
+          <div class="preview-col">
+            <h3>图片预览</h3>
+            <div id="image-preview" class="image-preview">
+              <img id="preview-img" alt="">
+            </div>
+            <div id="file-info" class="file-info-bar"></div>
+          </div>
+          <div class="info-col">
+            <div class="section-tabs">
+              <button class="section-tab active" data-section="exif">EXIF 元数据</button>
+              <button class="section-tab" data-section="basic">基本信息</button>
+            </div>
+            <div id="exif-section" class="info-content">
+              <div id="exif-data" class="exif-list">
+                <div class="placeholder-text">正在解析 EXIF 数据...</div>
+              </div>
+            </div>
+            <div id="basic-section" class="info-content" style="display:none">
+              <div id="basic-data" class="exif-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action -->
+        <div class="action-area">
+          <div class="action-bar">
+            <button class="btn btn-primary btn-lg" onclick="stripExif()">
+              🧹 清除 EXIF 并下载
+            </button>
+            <div id="strip-result" class="strip-result"></div>
+          </div>
+          <div class="action-note">
+            <span>💡 清除操作会重新编码图片，删除所有元数据（EXIF、XMP、ICC 等）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>📷 EXIF Remover — 所有处理在浏览器端完成，图片不上传服务器</p>
+      <p class="footer-small">纯前端工具 · 零服务端 · 隐私安全</p>
+    </div>
+  </footer>
+
+  <script src="js/exif.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

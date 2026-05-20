@@ -1,103 +1,116 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <!-- Primary Meta -->
-  <meta name="description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
-  <meta name="keywords" content="exif remover, remove exif online, exif viewer, photo metadata remover, 删除exif, 图片隐私保护">
+  <meta name="description" content="View and remove EXIF metadata from photos online. Clear GPS location, camera details, dates, and privacy-sensitive image data in your browser.">
+  <meta name="keywords" content="exif remover, remove exif online, exif viewer, photo metadata remover, remove gps from photo, image privacy tool">
   <meta name="author" content="Dudu Tools">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://exif-remover.vercel.app/">
-
-  <!-- Open Graph -->
+  <link rel="alternate" hreflang="en" href="https://exif-remover.vercel.app/">
+  <link rel="alternate" hreflang="zh-CN" href="https://exif-remover.vercel.app/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://exif-remover.vercel.app/">
+<!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="EXIF Remover - 免费在线工具">
-  <meta property="og:description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
+  <meta property="og:title" content="EXIF Remover Online | View and Remove Photo Metadata">
+  <meta property="og:description" content="View and remove EXIF metadata from photos online. Clear GPS location, camera details, dates, and privacy-sensitive image data in your browser.">
   <meta property="og:url" content="https://exif-remover.vercel.app/">
-  <meta property="og:image" content="https://exif-remover.vercel.app/og-image.png">
-  <meta property="og:site_name" content="EXIF Remover">
-  <meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="EXIF Remover">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EXIF Remover - 免费在线工具">
-  <meta name="twitter:description" content="在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。">
-  <meta name="twitter:image" content="https://exif-remover.vercel.app/og-image.png">
-  <meta charset="UTF-8">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EXIF Remover Online | View and Remove Photo Metadata">
+  <meta name="twitter:description" content="View and remove EXIF metadata from photos online. Clear GPS location, camera details, dates, and privacy-sensitive image data in your browser.">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXIF Remover - 免费在线工具 | 浏览器端处理 · 隐私安全</title>
+  <title>EXIF Remover Online | View and Remove Photo Metadata</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "EXIF Remover",
-  "description": "在线EXIF数据查看与删除工具。查看照片元数据（相机型号、GPS位置、拍摄日期），一键清除隐私信息。",
+  "description": "View and remove EXIF metadata from photos online. Clear GPS location, camera details, dates, and privacy-sensitive image data in your browser.",
   "url": "https://exif-remover.vercel.app/",
-  "applicationCategory": "DeveloperApplication",
+  "inLanguage": "en",
+  "applicationCategory": "SecurityApplication",
   "operatingSystem": "All",
   "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
   "featureList": [
-    "EXIF元数据全面解析",
-    "GPS地理位置检测与警告",
-    "一键清除所有元数据",
-    "清除前后文件大小对比",
-    "支持JPG/PNG/WebP/GIF",
-    "隐私保护优先"
-  ]
+    "Read EXIF metadata",
+    "Detect GPS location data",
+    "Warn about privacy-sensitive metadata",
+    "Remove embedded metadata",
+    "Compare file size before and after cleanup",
+    "Process images locally in the browser"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dudu Tools"
+  }
 }
   </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "inLanguage": "en",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "什么是 EXIF 数据？",
+      "name": "What is EXIF data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "EXIF 是照片文件中包含的元数据，记录了相机型号、拍摄日期、GPS 坐标、曝光参数等信息。"
+        "text": "EXIF data is metadata embedded in image files, often including camera model, capture date, exposure settings, and GPS coordinates."
       }
     },
     {
       "@type": "Question",
-      "name": "为什么要删除 EXIF 数据？",
+      "name": "Why remove EXIF metadata?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "EXIF 可能包含 GPS 位置、相机型号等隐私信息。在分享照片前清除 EXIF 可以保护个人隐私。"
+        "text": "EXIF can reveal private details such as where a photo was taken. Removing it helps protect privacy before sharing images."
       }
     },
     {
       "@type": "Question",
-      "name": "删除 EXIF 会影响图片质量吗？",
+      "name": "Will removing EXIF reduce image quality?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "清除 EXIF 时可能会因重新压缩略微影响画质，但工具会使用高质量设置尽量减少损失。"
+        "text": "The image may be re-encoded, but the tool uses quality settings intended to preserve visual quality."
       }
     },
     {
       "@type": "Question",
-      "name": "图片会上传到服务器吗？",
+      "name": "Are my photos uploaded?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不会。所有处理在浏览器端完成，图片不上传任何服务器，您的隐私安全有保障。"
+        "text": "No. Metadata inspection and cleanup happen in your browser."
       }
     }
   ]
 }
   </script>
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Speed Insights -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <h1 class="logo">📷 EXIF Remover</h1>
-        <p class="tagline">查看图片 EXIF 元数据 · 一键清除隐私信息 · 浏览器端处理</p>
+        <p class="tagline">View photo metadata · remove EXIF and GPS data · browser-based privacy tool</p>
+        <nav class="language-switcher" aria-label="Language"><a class="active" href="./" lang="en">EN</a><a class="" href="zh/" lang="zh-CN">中文</a></nav>
       </div>
     </div>
   </header>
@@ -109,8 +122,8 @@
         <div id="drop-zone" class="drop-zone">
           <div class="drop-content">
             <span class="drop-icon">🖼️</span>
-            <p>拖拽图片到此处或点击选择</p>
-            <p class="drop-hint">支持 JPG / PNG / WebP / GIF</p>
+            <p>Drop an image here or click to choose</p>
+            <p class="drop-hint">Supports JPG / PNG / WebP / GIF</p>
           </div>
           <input type="file" id="file-input" class="file-input" accept="image/jpeg,image/png,image/webp,image/gif">
         </div>
@@ -121,7 +134,7 @@
         <!-- Preview + Info -->
         <div class="preview-row">
           <div class="preview-col">
-            <h3>图片预览</h3>
+            <h3>Image preview</h3>
             <div id="image-preview" class="image-preview">
               <img id="preview-img" alt="">
             </div>
@@ -129,12 +142,12 @@
           </div>
           <div class="info-col">
             <div class="section-tabs">
-              <button class="section-tab active" data-section="exif">EXIF 元数据</button>
-              <button class="section-tab" data-section="basic">基本信息</button>
+              <button class="section-tab active" data-section="exif">EXIF metadata</button>
+              <button class="section-tab" data-section="basic">Basic info</button>
             </div>
             <div id="exif-section" class="info-content">
               <div id="exif-data" class="exif-list">
-                <div class="placeholder-text">正在解析 EXIF 数据...</div>
+                <div class="placeholder-text">Reading EXIF data...</div>
               </div>
             </div>
             <div id="basic-section" class="info-content" style="display:none">
@@ -147,22 +160,45 @@
         <div class="action-area">
           <div class="action-bar">
             <button class="btn btn-primary btn-lg" onclick="stripExif()">
-              🧹 清除 EXIF 并下载
+              Remove EXIF and download
             </button>
             <div id="strip-result" class="strip-result"></div>
           </div>
           <div class="action-note">
-            <span>💡 清除操作会重新编码图片，删除所有元数据（EXIF、XMP、ICC 等）</span>
+            <span>Cleanup re-encodes the image and removes all metadata (EXIF, XMP, ICC, and more)</span>
           </div>
         </div>
       </div>
     </div>
+    <section class="seo-content" aria-label="Tool guide and frequently asked questions">
+      <div class="seo-block">
+        <h2>What is EXIF Remover?</h2>
+        <p>A privacy-focused EXIF viewer and remover for inspecting photo metadata and stripping GPS location, camera details, dates, and other embedded data.</p>
+      </div>
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h2>Key Features</h2>
+          <ul><li>Read EXIF metadata</li><li>Detect GPS location data</li><li>Warn about privacy-sensitive metadata</li><li>Remove embedded metadata</li><li>Compare file size before and after cleanup</li><li>Process images locally in the browser</li></ul>
+        </div>
+        <div class="seo-block">
+          <h2>Common Use Cases</h2>
+          <ul><li>Remove GPS data before sharing photos</li><li>Inspect camera metadata</li><li>Clean image files for publishing</li><li>Reduce privacy risk in uploaded photos</li></ul>
+        </div>
+      </div>
+      <div class="seo-block faq-list">
+        <h2>Frequently Asked Questions</h2>
+        <details><summary>What is EXIF data?</summary><p>EXIF data is metadata embedded in image files, often including camera model, capture date, exposure settings, and GPS coordinates.</p></details>
+        <details><summary>Why remove EXIF metadata?</summary><p>EXIF can reveal private details such as where a photo was taken. Removing it helps protect privacy before sharing images.</p></details>
+        <details><summary>Will removing EXIF reduce image quality?</summary><p>The image may be re-encoded, but the tool uses quality settings intended to preserve visual quality.</p></details>
+        <details><summary>Are my photos uploaded?</summary><p>No. Metadata inspection and cleanup happen in your browser.</p></details>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>📷 EXIF Remover — 所有处理在浏览器端完成，图片不上传服务器</p>
-      <p class="footer-small">纯前端工具 · 零服务端 · 隐私安全</p>
+      <p>📷 EXIF Remover — All image processing runs in your browser. Images are not uploaded.</p>
+      <p class="footer-small">Frontend-only tool · no server storage · privacy-first</p>
     </div>
   </footer>
 

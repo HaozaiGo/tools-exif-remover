@@ -2,8 +2,8 @@
 
 > A privacy-focused EXIF viewer and remover for inspecting photo metadata and stripping GPS location, camera details, dates, and other embedded data.
 
-Canonical URL: https://exif-remover.vercel.app/
-Chinese URL: https://exif-remover.vercel.app/zh/
+Canonical URL: https://exif.imageprivacy.org/
+Chinese URL: https://exif.imageprivacy.org/zh/
 
 ## What it does
 
@@ -23,7 +23,7 @@ Chinese URL: https://exif-remover.vercel.app/zh/
 
 ## Privacy
 
-This tool is designed for browser-based processing whenever possible. User-provided content is not stored by Dudu Tools.
+This tool is designed for browser-based processing whenever possible. User-provided content is not stored by ImagePrivacy.
 
 ## FAQ
 
